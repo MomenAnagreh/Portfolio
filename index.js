@@ -1,7 +1,6 @@
-$(".title").css("color","green")
-$("button").click(function(){
-     $.ajax({url: "http://localhost:4001/", success: function(result){
-       console.log("yes");
-      $("#div1").text(result);
-    }});
+$(".title")//.css("color","green")
+$("#age").click(function(){
+     $.ajax({url: "http://localhost:4001/user/momen", method: "POST", data: {name: "momen anagreh", db: "users"}, success: function(result){
+      $("#div1").text(result.age);
+     }});
   }); 
