@@ -1,11 +1,3 @@
-// $(".title")//.css("color","green")
-// $("#firstTwenty").click(function(){
-//      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
-//       $("#div").text(result.fib);
-//      }});
-//   }); 
-
-
 $(".title")//.css("color","green")
 $("#firstTwenty").click(function(){
      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
