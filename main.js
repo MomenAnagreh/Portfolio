@@ -52,7 +52,9 @@ app.post("/user/:user", (req, res) => {
     b = c;
     fibb.fib.push(c);
   }
-  res.send(fibb.fib);
+  fibb.fib.unshift(1);
+  fibb.fib.unshift(0);
+  res.send(fibb);
 });
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

@@ -1,12 +1,22 @@
 // $(".title")//.css("color","green")
-// $("#age").click(function(){
-//      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", data: {name: "momen anagreh", db: "users"}, success: function(result){
-//       $("#div1").text(result.age);
+// $("#firstTwenty").click(function(){
+//      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
+//       $("#div").text(result.fib);
 //      }});
 //   }); 
+
+
 $(".title")//.css("color","green")
-$("#age").click(function(){
+$("#firstTwenty").click(function(){
      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
-      $("#div1").text(result);
-     }});
-  }); 
+      for(let i=0; i<23; i++){
+         let x = result.fib[i-1];
+         $("#div"+String(i)).text(x);
+     }}});
+}); 
+$("#indexNumber").click(function(){
+   $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
+      let index = prompt("Enter the index for the number?");
+      $("#index").text(result.fib[index-1])
+   }});
+}); 
