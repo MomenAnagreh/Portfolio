@@ -42,7 +42,7 @@ app.post("/user/:user", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   // let momen = req.body.family + " " + req.params.user
   const fibb = {
-    fib: []
+    fib: [0,1]
   };
   let a = 0;
   let b = 1;
@@ -52,8 +52,6 @@ app.post("/user/:user", (req, res) => {
     b = c;
     fibb.fib.push(c);
   }
-  fibb.fib.unshift(1);
-  fibb.fib.unshift(0);
   res.send(fibb);
 });
 app.listen(port, () => {

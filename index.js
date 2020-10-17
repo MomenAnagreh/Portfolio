@@ -1,9 +1,12 @@
 $(".title")//.css("color","green")
 $("#firstTwenty").click(function(){
      $.ajax({url: "http://localhost:4001/user/momen", method: "POST", success: function(result){
-      for(let i=0; i<23; i++){
-         let x = result.fib[i-1];
-         $("#div"+String(i)).text(x);
+      $('#body').html();
+      for(let i=0; i<result.fib.length; i++){
+         var dv = '<div id="div'+i+'"></div>';
+         $('#body').append(dv);
+         
+         $("#div"+String(i)).text(result.fib[i]);
      }}});
 }); 
 $("#indexNumber").click(function(){
